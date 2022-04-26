@@ -1,18 +1,16 @@
-
+// package NinjaCarrerCampApril.Web_Developer_Track.Introduction_to_java.compileTest;
 import java.util.*;
-public class interestingAlphabet {
+public class invertedTriangle {
     public static void main(String[] args) {
         // Write your code here
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        n--;
-        int k = 0;
         s.close();
-        for (int i = 'A' + n; i >='A'; i--) {
-            for (int j = i; j <= i + k ; j++)
-                System.out.print((char)(j));
+        for (int i = n; i >= 0; i--) {
+
+            for (int k = 0; k < i; k++)
+                System.out.print(i);
             System.out.println();
-            k++;
         }
 
     }
