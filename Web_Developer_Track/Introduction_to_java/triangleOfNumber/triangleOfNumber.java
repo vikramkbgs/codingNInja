@@ -8,27 +8,24 @@ public class triangleOfNumber
         int n;
         n  = s.nextInt();
         s.close();
-        int x = 1;
-        int original = n;
-       while (n > 0) 
-       {
-           // for space 
-           int m = n-1;
-           int num = original - m;
-           while(m > 0) 
-           {
-               System.out.print(" ");
-               m--;
-           }
-           
-           // print number
-           while (num > 1) {
-               System.out.print(x);
-               x++;
-               num--;
-           }
-           System.out.println();
-           n--;
-       }
+        int i = 1;
+        while(i <= n)
+        {
+            // print space
+            for(int j = 0; j<n-i; j++)
+            {
+                System.out.print(" ");
+            }
+            // print number
+            int k = i;
+            for (k = i; k < 2*i; k++) {
+                System.out.print(k);
+            }
+            for ( k = k-2; k >= i; k--) {
+                System.out.print(k);
+            }
+            System.out.println();
+            i++;
+        }
     }
 }
