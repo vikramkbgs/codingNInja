@@ -6,29 +6,38 @@ public class dimanodPattern {
     public static void main(String[] args) {
         // Write your code here
         Scanner s = new Scanner(System.in);
-        int rows = s.nextInt();
+        int n = s.nextInt();
         s.close();
-        for (int i = 1; i <= rows; i++) {
-            // Print space in decreasing order
-            for (int j = rows; j > i; j--) {
+        
+        int i = 1;
+        while(i <= (n+1)/2)
+        {
+            // for space
+            for(int j = 0; j<(n+1)/2-i; j++)
+            {
                 System.out.print(" ");
             }
-            // Print star in increasing order
-            for (int k = 1; k <= (i * 2) - 1; k++) {
+            // for star
+            for (int k = 0; k < 2*i-1 && n >= 2*i-1; k++) {
                 System.out.print("*");
             }
             System.out.println();
+            i++;
         }
-        for (int i = rows - 1; i >= 1; i--) {
-            // Print space in increasing order
-            for (int j = rows - 1; j >= i; j--) {
+        i = 1;
+        while(i < (n+1)/2)
+        {
+            // second half
+
+            for (int j = (n + 1) / 2; j > (n + 1) / 2 - i; j--) {
                 System.out.print(" ");
             }
-            // Print star in decreasing order
-            for (int k = 1; k <= (i * 2) - 1; k++) {
+            // for star
+            for (int k = 0; k <= (n + 1) / 2 - i; k++) {
                 System.out.print("*");
             }
             System.out.println();
+            i++;
         }
     }
 }
